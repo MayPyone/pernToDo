@@ -54,8 +54,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Live Demo Link (Replace with your actual link)
-- Video Link (Replace with your video link)
+- Live Demo Link (https://todolist-pbbg.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
