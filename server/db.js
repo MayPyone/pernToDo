@@ -19,7 +19,7 @@ const initializeDatabase = async () => {
         // Optionally, recreate the table if needed
         await pool.query(`
             CREATE TABLE todo (
-                id SERIAL PRIMARY KEY,
+                todo_id SERIAL PRIMARY KEY,
                 description TEXT NOT NULL,
                 completed BOOLEAN DEFAULT false
             );
