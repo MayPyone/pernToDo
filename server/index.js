@@ -21,7 +21,7 @@ app.get('/',async(req,res)=> {
 
 startUp()
 
-const port = process.env.PORT || 5000
+const port = process.env.SERVER_PORT || 5000
 app.listen(port,()=> {
     console.log("server is starting on port ",port)
 })
