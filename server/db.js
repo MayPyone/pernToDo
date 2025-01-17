@@ -11,7 +11,7 @@ const pool = new Pool({
 const initializeDatabase = async () => {
     try {
         await pool.query(`
-            DROP TABLE todo
+            DROP TABLE todo;
             );
         `);
         console.log('Database initialized');
