@@ -11,10 +11,7 @@ const pool = new Pool({
 const initializeDatabase = async () => {
     try {
         await pool.query(`
-            CREATE TABLE IF NOT EXISTS todo (
-                id SERIAL PRIMARY KEY,
-                description TEXT NOT NULL,
-                completed BOOLEAN DEFAULT false
+            DROP TABLE todo
             );
         `);
         console.log('Database initialized');

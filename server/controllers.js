@@ -1,4 +1,4 @@
-const pool = require("./db");
+const {pool} = require("./db");
 
 const addList = async (req, res) => {
   const { description } = req.body;
