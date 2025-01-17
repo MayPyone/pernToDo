@@ -15,6 +15,9 @@ const startUp = async()=> {
 }
 
 app.use('/api', router)
+app.get('/',async(req,res)=> {
+    res.json({success: "true", message: "Api is working"})
+})
 
 startUp()
 
