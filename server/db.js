@@ -1,17 +1,13 @@
 const Pool = require("pg").Pool;
 
-const pool = process.env.NODE_ENV === "production"
-  ? new Pool({
-      connectionString: process.env.DATABASE_URL,
-      ssl: { rejectUnauthorized: false }
-    })
-  : new Pool({
-      user: process.env.USER,
-      password: process.env.PASSWORD,
-      host: process.env.HOST,
-      database: process.env.DATABASE,
-      port: 5000
-    });
+const isProduction = process.env.NODE_ENV === "production";
+
+const pool = new Pool({
+  connectionString: isProduction
+    ? process.env.DATABASE_URL
+    : `postgresql://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:5432/${process.env.DATABASE}`,
+  ssl: isProduction ? { rejectUnauthorized: false } : false,
+});
 
 
 const initializeDatabase = async () => {
