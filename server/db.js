@@ -1,12 +1,11 @@
 const Pool = require("pg").Pool;
 
 const pool = new Pool({
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    host: process.env.HOST,
-    database: process.env.DATABASE,
-    database_url: process.env.Database_URL
-})
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
 
 const initializeDatabase = async () => {
     try {
