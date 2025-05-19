@@ -133,7 +133,6 @@ You can deploy this app to any cloud platform like Heroku, Render, or AWS.
 
 - [ ] **[Delete task]**
 - [ ] **[Add task categories]**
-- [ ] **[Task due date]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
